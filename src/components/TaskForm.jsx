@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Input, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Button } from '@material-ui/core';
+import { Input, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Button } from '@material-ui/core';
 
 class TaskForm extends React.Component {
   constructor(props) {
@@ -65,7 +65,7 @@ class TaskForm extends React.Component {
             })
           }}
         />
-        <input type="submit" value="Create Task" />
+        <Button onClick={this.createTask.bind(this)}>create task</Button>
       </form>
     )
   }
