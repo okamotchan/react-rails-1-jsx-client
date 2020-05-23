@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Table, TableCell, TableRow } from '@material-ui/core';
 
 class TaskRow extends React.Component {
   constructor(props) {
@@ -26,13 +26,23 @@ class TaskRow extends React.Component {
 
   render() {
     return (
-      <tr>
+        <tr>
         <td>{this.props.title}</td>
         <td>{this.props.desc}</td>
         <td>
-          <Button onClick={() => this.deleteTask(this.props.id)}>Delete</Button>
+          <Button onClick={() => this.deleteTask(this.props.id)} variant="outlined">Delete</Button>
         </td>
       </tr>
+
+      // <TableRow>
+      //     <TableCell align="">
+      //       {this.props.title}
+      //     </TableCell>
+      //     <TableCell align="left">
+      //       {this.props.desc}
+      //     </TableCell>
+      //     <Button onClick={() => this.deleteTask(this.props.id)} variant="outlined">Delete</Button>
+      //   </TableRow>
     )
   }
 }

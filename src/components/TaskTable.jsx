@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Table } from '@material-ui/core';
+import { Table, TableHead, TableRow, TableCell, TableBody } from '@material-ui/core';
 
 import TaskRow from './TaskRow';
 
@@ -14,26 +14,30 @@ class TaskTable extends React.Component {
 
     return (
       <Table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {tasks.map((task, index) => {
-            return (
-              <TaskRow 
-                key={index} 
-                id={task.id} 
-                title={task.title} 
-                desc={task.desc} 
-                getTasks={getTasks} 
-              />
-            );
-          })}
-        </tbody>
+        <TableHead>
+          <TableRow>
+            <TableCell>
+              Title
+            </TableCell>
+            <TableCell>
+              Description
+            </TableCell>
+          </TableRow>
+        </TableHead>
+
+        <TableBody>
+            {tasks.map((task, index) => {
+                return (
+                  <TaskRow 
+                    key={index} 
+                    id={task.id} 
+                    title={task.title} 
+                    desc={task.desc} 
+                    getTasks={getTasks} 
+                  />
+                );
+              })}
+        </TableBody>
       </Table>
     );
   }

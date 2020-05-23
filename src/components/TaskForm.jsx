@@ -46,6 +46,7 @@ class TaskForm extends React.Component {
     return (
       <form onSubmit={this.createTask}>
         <TextField
+          variant="outlined"
           input
           type="text" value={title}
           placeholder="Title"
@@ -57,6 +58,7 @@ class TaskForm extends React.Component {
         />
         
         <TextField
+          variant="outlined"
           input
           type="text" value={desc}
           placeholder="Description"
