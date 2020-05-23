@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Button } from '@material-ui/core';
+import { Input, TextField, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Button } from '@material-ui/core';
 
 class TaskForm extends React.Component {
   constructor(props) {
@@ -45,8 +45,8 @@ class TaskForm extends React.Component {
 
     return (
       <form onSubmit={this.createTask}>
-        <label>Title</label>
-        <input
+        <TextField
+          input
           type="text" value={title}
           placeholder="Title"
           onChange={(e) => {
@@ -55,8 +55,9 @@ class TaskForm extends React.Component {
             })
           }}
         />
-        <label>Description</label>
-        <input
+        
+        <TextField
+          input
           type="text" value={desc}
           placeholder="Description"
           onChange={(e) => {
@@ -65,7 +66,8 @@ class TaskForm extends React.Component {
             })
           }}
         />
-        <Button onClick={this.createTask.bind(this)}>create task</Button>
+        
+        <Button onClick={this.createTask.bind(this)} variant="outlined">create task</Button>
       </form>
     )
   }
