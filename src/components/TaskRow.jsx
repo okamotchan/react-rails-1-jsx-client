@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Table, TableCell, TableRow } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class TaskRow extends React.Component {
   constructor(props) {
@@ -30,7 +31,13 @@ class TaskRow extends React.Component {
         <td>{this.props.title}</td>
         <td>{this.props.desc}</td>
         <td>
-          <Button onClick={() => this.deleteTask(this.props.id)} variant="outlined">Delete</Button>
+          <Button 
+            onClick={() => this.deleteTask(this.props.id)}
+            variant="outlined"
+            startIcon={<DeleteIcon />}
+          >
+              Delete
+          </Button>
         </td>
       </tr>
 
