@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Table, TableCell, TableRow } from '@material-ui/core';
+import { Fab } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 class TaskRow extends React.Component {
@@ -31,25 +31,24 @@ class TaskRow extends React.Component {
         <td>{this.props.title}</td>
         <td>{this.props.desc}</td>
         <td>
-          <Button 
+          {/* <Button 
             onClick={() => this.deleteTask(this.props.id)}
             variant="outlined"
             startIcon={<DeleteIcon />}
           >
               Delete
-          </Button>
+          </Button> */}
+
+          <Fab 
+            color="secondary"
+            aria-label="edit"
+            size="small"
+            onClick={() => this.deleteTask(this.props.id)}
+          >
+            <DeleteIcon />
+          </Fab>
         </td>
       </tr>
-
-      // <TableRow>
-      //     <TableCell align="">
-      //       {this.props.title}
-      //     </TableCell>
-      //     <TableCell align="left">
-      //       {this.props.desc}
-      //     </TableCell>
-      //     <Button onClick={() => this.deleteTask(this.props.id)} variant="outlined">Delete</Button>
-      //   </TableRow>
     )
   }
 }

@@ -50,6 +50,7 @@ class TaskForm extends React.Component {
           input
           type="text" value={title}
           placeholder="Title"
+          size="small"
           onChange={(e) => {
             this.setState({
               title: e.target.value
@@ -62,6 +63,7 @@ class TaskForm extends React.Component {
           input
           type="text" value={desc}
           placeholder="Description"
+          size="small"
           onChange={(e) => {
             this.setState({
               desc: e.target.value
