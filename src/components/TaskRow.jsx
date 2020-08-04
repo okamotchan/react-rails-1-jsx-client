@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fab } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteDialog from './DeleteDialog';
 
 class TaskRow extends React.Component {
   constructor(props) {
@@ -31,22 +32,19 @@ class TaskRow extends React.Component {
         <td>{this.props.title}</td>
         <td>{this.props.desc}</td>
         <td>
-          {/* <Button 
-            onClick={() => this.deleteTask(this.props.id)}
-            variant="outlined"
-            startIcon={<DeleteIcon />}
-          >
-              Delete
-          </Button> */}
 
-          <Fab 
+          {/* <Fab 
             color="secondary"
             aria-label="edit"
             size="small"
-            onClick={() => this.deleteTask(this.props.id)}
           >
-            <DeleteIcon />
-          </Fab>
+            <DeleteIcon
+              onClick={() => this.deleteTask(this.props.id)}
+            >
+              <DeleteDialog />
+            </DeleteIcon>
+          </Fab> */}
+          <DeleteDialog />
         </td>
       </tr>
     )

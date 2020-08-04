@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import TaskTable from './components/TaskTable';
 import TaskForm from './components/TaskForm.jsx';
+import DeleteDialog from './components/DeleteDialog';
 
 import { Container } from '@material-ui/core';
 
